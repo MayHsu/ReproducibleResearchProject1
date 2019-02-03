@@ -64,7 +64,14 @@ The interval associated with maximum activity is interval `r maxInterval`, at `r
 
 ## 6. Code to describe and show a strategy for imputing missing data
 
-My strategy is to calculate average steps per interval first.
+Calculate and report the total number of missing values in the dataset
+
+```{r}
+NACount <- sum(is.na(activity))
+```
+
+There are total `r NACount` NA count.
+And my strategy is to calculate average steps per interval first.
 After that fill the missing data with calculated average steps by looping and updating one by one.
 
 ```{r}
